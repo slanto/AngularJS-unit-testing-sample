@@ -15,6 +15,9 @@
     <form ng-submit="vm.executeSearch()">
         <button id="searchButton" class="btn btn-default" type="submit">Search Users</button>
     </form>
+    <form ng-submit="vm.executeSearchFriends()">
+        <button id="searchFriendButton" class="btn btn-default" type="submit">Search Friends</button>
+    </form>
 </div>
 
 <div class="col-md-4"></div>
@@ -30,12 +33,24 @@
     <div class="col-md-4"></div>
 </div>
 
+<div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+        <friend-display-directive friends="vm.friends"></friend-display-directive>
+    </div>
+
+    <div class="col-md-4"></div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
 <script src="app/app.js"></script>
 <script src="app/user.service.js"></script>
 <script src="app/user.display.controller.js"></script>
 <script src="app/user.display.directive.js"></script>
+<script src="app/friend.service.js"></script>
+<script src="app/friend.display.directive.js"></script>
 
 </body>
 </html>
